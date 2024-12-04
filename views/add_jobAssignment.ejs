@@ -1,0 +1,26 @@
+<h1>Add a New Job Assignment</h1>
+<form action="/jobAssignments/add" method="post">
+    <label for="jobDescription">Job Description:</label>
+    <input type="text" id="jobDescription" name="jobDescription" required>
+
+    <label for="startDate">Start Date:</label>
+    <input type="date" id="startDate" name="startDate" required>
+
+    <label for="endDate">End Date:</label>
+    <input type="date" id="endDate" name="endDate" required>
+
+    <label for="hours">Hours:</label>
+    <input type="number" id="hours" name="hours" required>
+
+    <label for="payRate">Pay Rate:</label>
+    <input type="number" id="payRate" name="payRate" step="0.01" required>
+
+    <label for="clientId">Client:</label>
+    <select name="clientId" id="clientId" required>
+        <% clients.forEach(client => { %>
+            <option value="<%= client.ClientID %>"><%= client.Name %></option>
+        <% }); %>
+    </select>
+
+    <button type="submit">Add Job Assignment</button>
+</form>

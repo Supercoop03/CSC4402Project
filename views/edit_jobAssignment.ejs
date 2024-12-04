@@ -1,0 +1,22 @@
+<h1>Edit Job Assignment</h1>
+<form action="/jobAssignments/edit/<%= jobAssignment.AssignmentID %>" method="POST">
+    <label for="JobDescription">Job Description</label>
+    <input type="text" id="JobDescription" name="JobDescription" value="<%= jobAssignment.JobDescription %>">
+    
+    <label for="StartDate">Start Date</label>
+    <input type="date" id="StartDate" name="StartDate" value="<%= jobAssignment.StartDate %>">
+    
+    <label for="EndDate">End Date</label>
+    <input type="date" id="EndDate" name="EndDate" value="<%= jobAssignment.EndDate %>">
+    
+    <label for="Hours">Hours</label>
+    <input type="number" id="Hours" name="Hours" value="<%= jobAssignment.Hours %>">
+    
+    <label for="PayRate">Pay Rate</label>
+    <input type="number" id="PayRate" name="PayRate" value="<%= jobAssignment.PayRate %>">
+    
+    <label for="ClientID">Client</label>
+    <input type="number" id="ClientID" name="ClientID" value="<%= jobAssignment.ClientID %>">
+    
+    <button type="submit">Update</button>
+</form>

@@ -1,0 +1,19 @@
+<h1>Edit Client</h1>
+<form action="/clients/edit/<%= client.ClientID %>" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="<%= client.Name %>" required>
+
+    <label for="industry">Industry:</label>
+    <input type="text" id="industry" name="industry" value="<%= client.Industry %>" required>
+
+    <label for="contactInfo">Contact Info:</label>
+    <input type="text" id="contactInfo" name="contactInfo" value="<%= client.ContactInfo %>" required>
+
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" value="<%= client.Address %>" required>
+
+    <label for="contractDetails">Contract Details:</label>
+    <input type="text" id="contractDetails" name="contractDetails" value="<%= client.ContractDetails %>" required>
+
+    <button type="submit">Update Client</button>
+</form>

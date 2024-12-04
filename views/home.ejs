@@ -1,0 +1,40 @@
+<!-- views/home.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .nav-links {
+            margin-top: 30px;
+        }
+        .nav-links a {
+            margin: 0 20px;
+            font-size: 18px;
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the TigerTemp Management System</h1>
+    <div class="nav-links">
+        <a href="/workers">Workers</a>
+        <a href="/clients">Clients</a>
+        <a href="/jobAssignments">Job Assignments</a>
+    </div>
+</body>
+</html>

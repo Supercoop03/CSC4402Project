@@ -1,0 +1,48 @@
+<h1>All Clients</h1>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f4f4f4;
+    }
+</style>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Industry</th>
+            <th>Contact Info</th>
+            <th>Address</th>
+            <th>Contract Details</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% clients.forEach(client => { %>
+        <tr>
+            <td><%= client.Name %></td>
+            <td><%= client.Industry %></td>
+            <td><%= client.ContactInfo %></td>
+            <td><%= client.Address %></td>
+            <td><%= client.ContractDetails %></td>
+            <td>
+                <a href="/clients/edit/<%= client.ClientID %>">Edit</a>
+                <a href="/clients/delete/<%= client.ClientID %>" onclick="return confirm('Are you sure you want to delete this client?');">Delete</a>
+            </td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>
+
+<a href="/clients/add">Add New Client</a>
